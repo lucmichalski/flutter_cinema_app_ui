@@ -22,28 +22,39 @@ class _HomeScreen extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(
-        title: Text("Home"),
-        centerTitle: true,
-        elevation: 0.0,
-        leading: Container(
-          margin: EdgeInsets.all(10.0),
-          decoration: BoxDecoration(
-            color: Color(0xFF0C0C0C),
-            borderRadius: BorderRadius.all(Radius.circular(5.0))
-          ),
-          child: IconButton(icon: SvgPicture.asset("assets/icons/bell-outline.svg", color: Colors.white,), onPressed: null)
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(65.0),
+        child: Container(
+          margin: EdgeInsets.only(top: 50.0),
+          padding: EdgeInsets.symmetric(horizontal: 25.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                width: 35.0,
+                height: 35.0,
+                margin: EdgeInsets.all(10.0),
+                decoration: BoxDecoration(
+                  color: Color(0xFF0C0C0C),
+                  borderRadius: BorderRadius.all(Radius.circular(5.0))
+                ),
+                child: IconButton(icon: SvgPicture.asset("assets/icons/bell-outline.svg", color: Colors.white,), onPressed: null)
+              ),
+              Text('Home', style: TextStyle(color: Colors.white, fontSize: 16.0, fontWeight: FontWeight.bold)),
+              Container(
+                width: 35.0,
+                height: 35.0,
+                margin: EdgeInsets.all(10.0),
+                decoration: BoxDecoration(
+                  color: Color(0xFF0C0C0C),
+                  borderRadius: BorderRadius.all(Radius.circular(5.0))
+                ),
+                child: IconButton(icon: SvgPicture.asset("assets/icons/settings-outline.svg", color: Colors.white,), onPressed: null)
+              ),
+            ]
+          )
         ),
-        actions: <Widget>[
-          Container(
-            margin: EdgeInsets.all(10.0),
-            decoration: BoxDecoration(
-              color: Color(0xFF0C0C0C),
-              borderRadius: BorderRadius.all(Radius.circular(5.0))
-            ),
-            child: IconButton(icon: SvgPicture.asset("assets/icons/settings-outline.svg", color: Colors.white,), onPressed: null)
-          ),
-        ],
       ),
       body: Container(
         margin: EdgeInsets.only(top: 20.0, bottom: 24.0),
