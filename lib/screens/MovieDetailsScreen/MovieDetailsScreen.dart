@@ -72,7 +72,7 @@ class _MovieDetailsScreen extends State<MovieDetailsScreen> {
                     color: Color(0xFF0C0C0C).withOpacity(0.7),
                     borderRadius: BorderRadius.all(Radius.circular(5.0))
                   ),
-                  child: IconButton(icon: SvgPicture.asset("assets/icons/chevron-left-outline.svg", color: Colors.white,), onPressed: null)
+                  child: IconButton(icon: SvgPicture.asset("assets/icons/chevron-left-outline.svg", color: Colors.white,), onPressed: () => Navigator.pop(context))
                 ),
                 Container(
                   width: 35.0,
