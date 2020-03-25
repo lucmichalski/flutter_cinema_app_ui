@@ -43,7 +43,7 @@ class _MovieCard extends State<MovieCard> {
             children: <Widget>[
               Text(widget.movie.name, style: TextStyle(fontSize: 20.0, color: Colors.white, fontWeight: FontWeight.bold),),
               SizedBox(height: 10.0,),
-              Text(widget.movie.description, style: TextStyle(fontSize: 11.0, color: Colors.white, fontWeight: FontWeight.w300, height: 2.0),)
+              Text(widget.movie.shortDescription, style: TextStyle(fontSize: 11.0, color: Colors.white, fontWeight: FontWeight.w300, height: 2.0),)
             ],
           ),
         ),

@@ -39,7 +39,7 @@ class _MovieDetailsScreen extends State<MovieDetailsScreen> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(widget.movie.name.toString(), style: TextStyle(color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.w500)),
+                    Text(widget.movie.name.toString(), style: TextStyle(color: Colors.white, fontSize: 22.0, fontWeight: FontWeight.bold)),
                     SizedBox(height: 10.0,),
                     Text(widget.movie.description.toString(), style: TextStyle(color: Colors.white, fontSize: 11.0, height: 2.0)),
                     SizedBox(height: 20.0),
