@@ -1,4 +1,5 @@
 import 'package:cinema_app_flutter/models/Movie.dart';
+import 'package:cinema_app_flutter/screens/MovieDetailsScreen/MovieDetailsScreen.dart';
 import 'package:flutter/material.dart';
 
 class MovieCard extends StatefulWidget {
@@ -26,7 +27,7 @@ class _MovieCard extends State<MovieCard> {
         ),
       ),
       child: InkWell(
-        onTap: () => print("movie : ${widget.movie.name} clicked"),
+        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => MovieDetailsScreen(movie: widget.movie))),
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 18.0, vertical: 23.0),
           decoration: BoxDecoration(
