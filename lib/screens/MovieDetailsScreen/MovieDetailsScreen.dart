@@ -1,3 +1,4 @@
+import 'package:cinema_app_flutter/animations/FadeIn.dart';
 import 'package:cinema_app_flutter/components/BottomNavigation/BottomNavigation.dart';
 import 'package:cinema_app_flutter/components/Button/Button.dart';
 import 'package:cinema_app_flutter/models/Movie.dart';
@@ -43,11 +44,20 @@ class _MovieDetailsScreen extends State<MovieDetailsScreen> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Text(widget.movie.name.toString(), style: TextStyle(color: Colors.white, fontSize: 22.0, fontWeight: FontWeight.bold)),
+                        FadeIn(
+                          1,
+                          Text(widget.movie.name.toString(), style: TextStyle(color: Colors.white, fontSize: 22.0, fontWeight: FontWeight.bold)),
+                        ),
                         SizedBox(height: 10.0,),
-                        Text(widget.movie.description.toString(), style: TextStyle(color: Colors.white, fontSize: 11.0, height: 2.0)),
+                        FadeIn(
+                          1.5,
+                          Text(widget.movie.description.toString(), style: TextStyle(color: Colors.white, fontSize: 11.0, height: 2.0)),
+                        ),
                         SizedBox(height: 20.0),
-                        Button(text: "Buy tickets"),
+                        FadeIn(
+                          2,
+                          Button(text: "Buy tickets"),
+                        )
                       ]
                     ),
                   ),
