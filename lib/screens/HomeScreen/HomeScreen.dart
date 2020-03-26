@@ -23,7 +23,7 @@ class _HomeScreen extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(65.0),
+        preferredSize: Size.fromHeight(100.0),
         child: Container(
           margin: EdgeInsets.only(top: 50.0),
           padding: EdgeInsets.symmetric(horizontal: 25.0),
